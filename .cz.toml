@@ -1,0 +1,20 @@
+[tool.commitizen]
+name = "cz_conventional_commits"
+
+version = "0.0.0"
+version_files = [
+    "VERSION"
+]
+
+tag_format = "$version"
+
+changelog_file = "CHANGELOG.md"
+changelog_incremental = true
+update_changelog_on_bump = true
+major_version_zero = true
+
+bump_message = "chore(release): bump version $current_version → $new_version"
+
+allow_breaking_change = ["refactor"]
+
+change_type_map = { "feat" = "Features", "fix" = "Bug Fixes", "perf" = "Performance Improvements" }
