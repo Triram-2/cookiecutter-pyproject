@@ -36,11 +36,6 @@ audit = [
     "pip-audit",
 ]
 
-docs = [
-    "sphinx",
-    "sphinx-rtd-theme"
-]
-
 dev = [
     "nox",
     "commitizen"
@@ -51,7 +46,6 @@ all = [
     "{{ cookiecutter.project_name }}[test]",
     "{{ cookiecutter.project_name }}[profile]",
     "{{ cookiecutter.project_name }}[audit]",
-    "{{ cookiecutter.project_name }}[docs]",
     "{{ cookiecutter.project_name }}[dev]"
 ]
 
