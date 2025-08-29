@@ -132,7 +132,7 @@ def locust(session: Session) -> None:
         session.warn(f"File {locust_file} not found. To run Locust, you need to create it and define load scenarios.")
         session.log(
             "Example command if locustfile.py exists: "
-            "locust -f locustfile.py --host=http://localhost:{{cookiecutter.app_port_host}}"
+            "locust -f locustfile.py --host=http://localhost:8000"
         )
         return
 
