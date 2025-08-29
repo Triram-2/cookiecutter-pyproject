@@ -1,3 +1,15 @@
+## 0.2.0 (2025-08-29)
+
+### 🐛 Bug Fixes
+
+- **pyproject.toml**: fixed type_map
+- **.python_version**: fixed value substitution
+- **.cz.toml**: upgraded type_map
+
+### 🚀 Features
+
+- **__init__**: realised
+
 ## 0.1.1 (2025-08-29)
 
 ### Bug Fixes
