@@ -182,7 +182,7 @@ def commit(session: Session) -> None:
     """Full CI cycle and commit only if there are no errors"""
     session.run("nox", "-s", "ci-3.13", external=True)
     session.run("nox", "-s", "clean", external=True)
-    session.run("nox", "-s", "commit", external=True)
+    session.run("nox", "-s", "_commit", external=True)
 
 
 @nox.session(python=False)
