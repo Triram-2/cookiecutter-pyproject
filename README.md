@@ -1,9 +1,5 @@
 # Cookiecutter PyProject
 
-[![----------------------](https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png)](#)
-<p align="center">
-    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" />
-</p>
 <h1 align="center">Cookiecutter template for Python project</h1>
 <p align="center">
     <a href="https://github.com/Triram-2/cookiecutter-pyproject/stargazers">
