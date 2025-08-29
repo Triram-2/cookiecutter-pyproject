@@ -284,16 +284,4 @@ bump_message = "chore(release): bump version $current_version → $new_version"
 
 allow_breaking_change = ["refactor"]
 
-change_type_map = {
-    "feat" = "🚀 Features",
-    "fix" = "🐛 Bug Fixes",
-    "perf" = "⚡ Performance Improvements",
-    "docs" = "📝 Documentation",
-    "style" = "💄 Code Style",
-    "refactor" = "♻️ Code Refactoring",
-    "test" = "✅ Tests",
-    "build" = "👷 Build System",
-    "ci" = "💚 Continuous Integration",
-    "chore" = "🔧 Chores",
-    "revert" = "⏪ Reverts"
-}
+change_type_map = {"feat" = "🚀 Features", "fix" = "🐛 Bug Fixes", "perf" = "⚡ Performance Improvements", "docs" = "📝 Documentation", "style" = "💄 Code Style", "refactor" = "♻️ Code Refactoring", "test" = "✅ Tests", "build" = "👷 Build System", "ci" = "💚 Continuous Integration", "chore" = "🔧 Chores", "revert" = "⏪ Reverts"}
