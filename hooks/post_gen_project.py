@@ -3,6 +3,7 @@ import shutil
 
 print('Project created successfully!')
 print('Next steps:')
+print('0. Uncomment string "# .env  # TODO: uncomment! " in .gitignore')
 print('1. cd {{cookiecutter.project_slug}}')
 print('2. git init')
 print('3. git add .')
@@ -22,6 +23,10 @@ if '{{ cookiecutter.use_gitlab }}' != 'y':
     os.remove('.gitlab-ci.yml')
 if '{{ cookiecutter.use_todo_md }}' != 'y':
     os.remove('TODO.md')
+if '{{ cookiecutter.use_configs }}' != 'y':
+    shutil.rmtree('configs')
+if '{{ cookiecutter.use_dot_env }}' != 'y':
+    os.remove('.env')
 
 # Лицензия
 license_ = "{{ cookiecutter.license }}"

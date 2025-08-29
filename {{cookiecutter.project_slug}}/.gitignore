@@ -326,7 +326,7 @@ activemq-data/
 *.sage.py
 
 # Environments
-.env
+# .env  # TODO: uncomment!
 .envrc
 .venv
 env/

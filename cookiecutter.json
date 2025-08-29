@@ -7,6 +7,8 @@
     "version": "0.0.0",
     "description": "A short description of the project",
     "python_version": ["3.12", "3.13", "3.14"],
+    "use_configs": ["y", "n"],
+    "use_dot_env": ["y", "n"],
     "use_docker": ["y", "n"],
     "use_k8s": ["y", "n"],
     "use_gitlab": ["y", "n"],
