@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 
-root = Path(__file__).resolve().parent.parent / {{ cookiecutter.project_slug }}
+root = Path(__file__).resolve().parent.parent / "{{ cookiecutter.project_slug }}"
 sys.path.insert(0, str(root))
 
 
