@@ -5,7 +5,7 @@ import pytest
 
 @pytest.fixture
 def clean_modules():
-    """Очищает модули после каждого теста"""
+    """Cleans modules after each test"""
     modules_to_clean = [
         'common.constants.paths',
         'common.constants.environment'
@@ -16,6 +16,6 @@ def clean_modules():
             if module in sys.modules:
                 del sys.modules[module]
 
-    cleanup()  # Очищаем перед тестом
+    cleanup()  # Clean up before the test
     yield
-    cleanup()  # Очищаем после теста
+    cleanup()  # Clean up after the test

@@ -1,0 +1,1 @@
+There is no universal option - it depends too much on the project.

@@ -1,1 +1,1 @@
-Эта папка не попадёт в проект. Она нужна лишь для работы cookiecutter-темплейта
+This folder will not be included in the project. It is only needed for the cookiecutter template to work

@@ -13,7 +13,7 @@ print('6. git remote add origin {Your repo}')
 print('7. git push -u origin main')
 print('8. git switch -c develop')
 
-# Удаление ненужного пользователю
+# Remove files and directories not needed by the user
 if '{{ cookiecutter.use_docker }}' != 'y':
     shutil.rmtree('docker')
 if '{{ cookiecutter.use_k8s }}' != 'y' or '{{ cookiecutter.use_docker }}' != 'y':
@@ -28,10 +28,10 @@ if '{{ cookiecutter.use_configs }}' != 'y':
 if '{{ cookiecutter.use_dot_env }}' != 'y':
     os.remove('.env')
 
-# Лицензия
+# License
 license_ = "{{ cookiecutter.license }}"
 if license_ in {"MIT", "BSD", "Apache", "GPL"}:
     shutil.move('template_data/licenses/{{ cookiecutter.license }}', 'LICENSE')
 
-# Удаление лишнего
+# Remove redundant files and directories
 shutil.rmtree('template_data')

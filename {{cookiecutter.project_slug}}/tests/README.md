@@ -1,11 +1,11 @@
-smoke - тесты на то, жива ли система
-unit - модульные тесты
-integration - тесты всех интеграций
-e2e - e2e тесты
-performance - тесты производительности
-security - тесты безопасности
-accessibility - тесты доступности
-compatibility - тесты совместимости
+smoke - tests to see if the system is alive
+unit - unit tests
+integration - integration tests
+e2e - e2e tests
+performance - performance tests
+security - security tests
+accessibility - accessibility tests
+compatibility - compatibility tests
 
-mocks - моки и заглушки
-fixtures - фикстуры для тестов
+mocks - mocks and stubs
+fixtures - fixtures for tests
