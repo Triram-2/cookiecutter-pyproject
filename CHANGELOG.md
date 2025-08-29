@@ -1,3 +1,12 @@
+## 0.2.1 (2025-08-29)
+
+### 🐛 Bug Fixes
+
+- **pyproject.toml**: removed docs dependencies
+- **noxfile**: replased git push from bump to _commit
+- **noxfile**: fixed commit session
+- **__init__**: fixed doubles
+
 ## 0.2.0 (2025-08-29)
 
 ### 🐛 Bug Fixes
