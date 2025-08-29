@@ -1,7 +1,7 @@
 [project]
-name = {{ cookiecutter.project_name }}
-version = {{ cookiecutter.version }}
-description = {{ cookiecutter.description }}
+name = "{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.description }}"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -261,7 +261,7 @@ no-web = true
 [tool.commitizen]
 name = "cz_conventional_commits"
 
-version = {{ cookiecutter.version }}
+version = "{{ cookiecutter.version }}"
 version_files = [
     "src/{{ cookiecutter.project_slug }}/__init__.py:__version__",
     "pyproject.toml:version"
