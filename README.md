@@ -1,5 +1,3 @@
-# Cookiecutter PyProject
-
 <h1 align="center">Cookiecutter template for Python project</h1>
 <p align="center">
     <a href="https://github.com/Triram-2/cookiecutter-pyproject/stargazers">
@@ -10,7 +8,8 @@
         <img alt="License" src="https://img.shields.io/github/license/Triram-2/cookiecutter-pyproject?style=for-the-badge&logo=github&color=B5E8E0&logoColor=D9E0EE&labelColor=302D41"></a>
 </p>
 
-Шаблон [Cookiecutter](https://github.com/cookiecutter/cookiecutter) для создания современных проектов на Python.
+Шаблон [Cookiecutter](https://github.com/cookiecutter/cookiecutter), предназначенный для других темплейтов(!) cookiecutter
+Он не предназначен для реальных проектов, поскольку слишком обобщён.
 
 Этот шаблон создает основу проекта с настроенными инструментами для линтинга, форматирования, тестирования, автоматизации задач и управления зависимостями, позволяя вам сосредоточиться на написании кода.
 
