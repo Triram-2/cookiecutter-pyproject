@@ -115,7 +115,8 @@ After generation, you will get the following directory structure:
 │   └───.gitkeep
 ├───src/
 │   └───{{cookiecutter.project_slug}}/
-│       └───README.md
+│       ├───README.md
+│       └───__init__.py
 └───tests/
     ├───conftest.py
     ├───README.md
