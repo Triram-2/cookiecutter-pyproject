@@ -8,63 +8,63 @@
         <img alt="License" src="https://img.shields.io/github/license/Triram-2/cookiecutter-pyproject?style=for-the-badge&logo=github&color=B5E8E0&logoColor=D9E0EE&labelColor=302D41"></a>
 </p>
 
-Шаблон [Cookiecutter](https://github.com/cookiecutter/cookiecutter), предназначенный для других темплейтов(!) cookiecutter
-Он не предназначен для реальных проектов, поскольку слишком обобщён.
+A [Cookiecutter](https://github.com/cookiecutter/cookiecutter) template designed for other cookiecutter templates (!).
+It is not intended for real projects, as it is too generalized.
 
-Этот шаблон создает основу проекта с настроенными инструментами для линтинга, форматирования, тестирования, автоматизации задач и управления зависимостями, позволяя вам сосредоточиться на написании кода.
+This template creates a project base with configured tools for linting, formatting, testing, task automation, and dependency management, allowing you to focus on writing code.
 
-## Особенности
+## Features
 
-- **Управление зависимостями**: Использует `pyproject.toml` и [UV](https://github.com/astral-sh/uv) для быстрого и надежного управления зависимостями.
-- **Автоматизация задач**: [Nox](https://nox.thea.codes/) для автоматизации линтинга, тестов, аудита и других задач.
-- **Линтинг и форматирование**: Настроенный [Ruff](https://github.com/astral-sh/ruff) для сверхбыстрого линтинга и форматирования кода.
-- **Проверка типов**: Статическая проверка типов с помощью [Pyright](https://github.com/microsoft/pyright).
-- **Тестирование**: Готовая структура для тестов с использованием [Pytest](https://pytest.org/), включая отчеты о покрытии ([Coverage.py](https://coverage.readthedocs.io/)) и property-based тестирование ([Hypothesis](https://hypothesis.readthedocs.io/)).
-- **Стандартизация коммитов**: Интеграция с [Commitizen](https://commitizen-tools.github.io/commitizen/) для стандартизированных сообщений коммитов (Conventional Commits).
-- **Аудит безопасности**: Проверка уязвимостей в зависимостях с помощью [pip-audit](https://pypi.org/project/pip-audit/).
-- **Профилирование**: Встроенная задача для профилирования кода с помощью [Scalene](https://github.com/plasma-umass/scalene).
-- **Контейнеризация (опционально)**: Возможность включения `Dockerfile` и `docker-compose` для различных окружений.
-- **CI/CD (опционально)**: Базовый шаблон для `.gitlab-ci.yml`.
-- **Гибкость**: Множество опций для включения/отключения функциональности в зависимости от нужд проекта.
+- **Dependency Management**: Uses `pyproject.toml` and [UV](https://github.com/astral-sh/uv) for fast and reliable dependency management.
+- **Task Automation**: [Nox](https://nox.thea.codes/) for automating linting, tests, auditing, and other tasks.
+- **Linting and Formatting**: Configured [Ruff](https://github.com/astral-sh/ruff) for super-fast linting and code formatting.
+- **Type Checking**: Static type checking with [Pyright](https://github.com/microsoft/pyright).
+- **Testing**: Ready-made structure for tests using [Pytest](https://pytest.org/), including coverage reports ([Coverage.py](https://coverage.readthedocs.io/)) and property-based testing ([Hypothesis](https://hypothesis.readthedocs.io/)).
+- **Commit Standardization**: Integration with [Commitizen](https://commitizen-tools.github.io/commitizen/) for standardized commit messages (Conventional Commits).
+- **Security Audit**: Vulnerability checking in dependencies with [pip-audit](https://pypi.org/project/pip-audit/).
+- **Profiling**: Built-in task for code profiling with [Scalene](https://github.com/plasma-umass/scalene).
+- **Containerization (optional)**: Ability to include `Dockerfile` and `docker-compose` for various environments.
+- **CI/CD (optional)**: Basic template for `.gitlab-ci.yml`.
+- **Flexibility**: Many options to enable/disable functionality depending on project needs.
 
-## Требования
+## Requirements
 
-Убедитесь, что у вас установлен `cookiecutter`:
+Make sure you have `cookiecutter` installed:
 ```bash
 pipx install cookiecutter
 ```
 
-## Использование
+## Usage
 
-Чтобы создать новый проект, выполните команду:
+To create a new project, run the command:
 
 ```bash
 cookiecutter gh:Triram-2/cookiecutter-pyproject
 ```
 
-Вам будет предложено ввести следующие параметры:
+You will be prompted to enter the following parameters:
 
-| Параметр | Описание                                                              | Значение по умолчанию                 |
-|---|-----------------------------------------------------------------------|---------------------------------------|
-| `project_name` | Название проекта.                                                     | `My Amazing Project`                  |
-| `project_slug` | Имя каталога проекта (генерируется из `project_name`).                | `my_amazing_project`                  |
-| `author_name` | Ваше имя.                                                             | `Your Name`                           |
-| `author_email` | Ваш email.                                                            | `your.email@example.com`              |
-| `year` | Текущий год.                                                          | `2025`                                |
-| `version` | Начальная версия проекта.                                             | `0.0.0`                               |
-| `description` | Краткое описание проекта.                                             | `A short description...`              |
-| `python_version` | Выбор версии Python.                                                  | `3.12` / `3.13` / `3.14`              |
-| `use_configs` | Использовать ли полноценную папку configs с разделением по окружениям | `y` / `n`                             |
-| `use_dot_env` | Использовать ли `.env` файл для переменных окружения.                 | `y` / `n`                             |
-| `use_docker` | Включить ли файлы для Docker.                                         | `y` / `n`                             |
-| `use_k8s` | Включить ли каталог для Kubernetes.                                   | `y` / `n`                             |
-| `use_gitlab` | Включить ли `.gitlab-ci.yml` и .gitlab                                | `y` / `n`                             |
-| `use_todo_md` | Создать ли файл `TODO.md`.                                            | `y` / `n`                             |
-| `license` | Выбор лицензии.                                                       | `MIT`, `BSD`, `Apache`, `GPL`, `none` |
+| Parameter | Description                                                              | Default Value                     |
+|---|-----------------------------------------------------------------------|-------------------------------------------|
+| `project_name` | The name of the project.                                                     | `My Amazing Project`                      |
+| `project_slug` | The project directory name (generated from `project_name`).                | `my_amazing_project`                      |
+| `author_name` | Your name.                                                             | `Your Name`                               |
+| `author_email` | Your email.                                                            | `your.email@example.com`                  |
+| `year` | Current year.                                                          | `2025`                                    |
+| `version` | Initial project version.                                             | `0.0.0`                                   |
+| `description` | A short description of the project.                                             | `A short description...`                  |
+| `python_version` | Python version selection.                                                  | `3.12` / `3.13` / `3.14`                  |
+| `use_configs` | Whether to use a full configs folder with environment separation | `y` / `n`                                 |
+| `use_dot_env` | Whether to use a `.env` file for environment variables.                 | `y` / `n`                                 |
+| `use_docker` | Whether to include Docker files.                                         | `y` / `n`                                 |
+| `use_k8s` | Whether to include a Kubernetes directory.                                   | `y` / `n`                                 |
+| `use_gitlab` | Whether to include `.gitlab-ci.yml` and .gitlab                                | `y` / `n`                                 |
+| `use_todo_md` | Whether to create a `TODO.md` file.                                            | `y` / `n`                                 |
+| `license` | License selection.                                                       | `MIT` / `BSD` / `Apache` / `GPL` / `none` |
 
-## Структура сгенерированного проекта
+## Generated Project Structure
 
-После генерации вы получите следующую структуру каталогов:
+After generation, you will get the following directory structure:
 
 ```
 {{cookiecutter.project_slug}}/
@@ -145,31 +145,32 @@ cookiecutter gh:Triram-2/cookiecutter-pyproject
         └───conftest.py
 ```
 
-## Работа с сгенерированным проектом
+## Working with the Generated Project
 
-Все основные команды для разработки, тестирования и сборки управляются через `nox`.
+All main commands for development, testing, and building are managed via `nox`.
 
-### Установка
+### Installation
 
-Для начала установите `nox` и `uv` (рекомендуется):
+First, install `nox` and `uv` (recommended):
 ```bash
 pipx install nox uv
 ```
 
-### Доступные команды
+### Available Commands
 
-Выполните `nox -l`, чтобы увидеть список всех доступных сессий.
+Run `nox -l` to see a list of all available sessions.
 
-- **`nox -s lint`**: Запускает проверку кода с помощью Ruff и Pyright.
-- **`nox -s test`**: Запускает тесты с помощью Pytest и выводит отчет о покрытии(Coverage).
-- **`nox -s audit`**: Проверяет зависимости на наличие уязвимостей.
-- **`nox -s profile`**: Запускает профилирование кода.
-- **`nox -s ci`**: Выполняет полный цикл CI (линтинг + тесты).
-- **`nox -s commit`**: Запускает `cz commit` после успешного прохождения CI.
-- **`nox -s bump`**: Обновляет версию проекта с помощью `cz bump` и отправляет изменения.
-- **`nox -s release`**: Комбинирует `commit` и `bump` для создания релиза.
-- **`nox -s clean`**: Удаляет временные файлы и кэш.
+- **`nox -s lint`**: Runs code checks with Ruff and Pyright.
+- **`nox -s test`**: Runs tests with Pytest and outputs a coverage report.
+- **`nox -s audit`**: Checks dependencies for vulnerabilities.
+- **`nox -s profile`**: Runs code profiling.
+- **`nox -l locust`**: Runs Locust load tests.
+- **`nox -s ci`**: Executes a full CI cycle (linting + tests).
+- **`nox -s commit`**: Runs `cz commit` after successful CI.
+- **`nox -s bump`**: Updates the project version with `cz bump` and pushes changes.
+- **`nox -s release`**: Combines `commit` and `bump` to create a release.
+- **`nox -s clean`**: Removes temporary files and cache.
 
-## Лицензия
+## License
 
-Этот шаблон распространяется под лицензией [MIT](./LICENSE). Сгенерированный проект будет иметь лицензию, выбранную вами при создании.
+This template is distributed under the [MIT License](./LICENSE). The generated project will have the license you selected during creation.
