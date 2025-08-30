@@ -392,3 +392,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Specific for project
+tests/report/**
