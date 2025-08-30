@@ -205,7 +205,6 @@ def bump(session: Session) -> None:
     """Bump via commitizen + `git push -u origin main`"""
     session.run('nox', '-s', 'all-tests', external=True)
     session.run("cz", "bump", external=True)
-    session.run("cz", "bump", external=True)
 
 
 @nox.session(python=False)
