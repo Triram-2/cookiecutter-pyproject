@@ -1,3 +1,16 @@
+## 0.3.0 (2025-08-30)
+
+### 🐛 Bug Fixes
+
+- **noxfile**: fixed names and posargs
+- **pyproject.toml**: added pytest-mock
+- **noxfile**: allowed 0 tests and 0 coverage
+- **pyproject.toml**: fixed doubles
+
+### 🚀 Features
+
+- **noxfile**: differented tests
+
 ## 0.2.1 (2025-08-29)
 
 ### 🐛 Bug Fixes
