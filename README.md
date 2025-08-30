@@ -162,13 +162,15 @@ pipx install nox uv
 Run `nox -l` to see a list of all available sessions.
 
 - **`nox -s lint`**: Runs code checks with Ruff and Pyright.
-- **`nox -s test`**: Runs tests with Pytest and outputs a coverage report.
+- **`nox -s test`**: Runs tests with Pytest and outputs a coverage report(by default only unit tests)
+- **`nox -s unit-test`**: Runs unit tests (tests/unit)
+- **`nox -s all-tests`**: Runs all tests (full tests dir)
 - **`nox -s audit`**: Checks dependencies for vulnerabilities.
 - **`nox -s profile`**: Runs code profiling.
 - **`nox -l locust`**: Runs Locust load tests.
-- **`nox -s ci`**: Executes a full CI cycle (linting + tests).
+- **`nox -s ci`**: Executes a full CI cycle (linting + unit-test).
 - **`nox -s commit`**: Runs `cz commit` after successful CI.
-- **`nox -s bump`**: Updates the project version with `cz bump` and pushes changes.
+- **`nox -s bump`**: Updates the project version with `cz bump` and pushes changes if all-tests is not raised errors..
 - **`nox -s release`**: Combines `commit` and `bump` to create a release.
 - **`nox -s clean`**: Removes temporary files and cache.
 

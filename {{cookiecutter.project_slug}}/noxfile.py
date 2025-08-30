@@ -17,7 +17,6 @@ PYPROJECT_CONTENT: Dict[str, Any] = tomllib.loads(Path("pyproject.toml").read_te
 PROJECT_NAME: str = PYPROJECT_CONTENT["project"]["name"]
 PYTHON_VERSIONS: List[str] = ["3.12", "3.13"]
 SRC_DIR: str = "src"
-TESTS_DIR: str = "tests"
 DOCS_DIR: str = "docs"
 COVERAGE_FAIL_UNDER: int = 0  # TODO: change to 80-99
 os.environ["PYTHONDONTWRITEBYTECODE"] = "1"
@@ -63,6 +62,8 @@ def test(session: Session) -> None:
     session.log("Installing dependencies for testing...")
     install_project_with_deps(session, "test")
 
+    tests_dir = session.posargs[0] if session.posargs else 'tests/unit'
+
     session.log("Running tests with coverage...")
     session.run(
         "coverage",
@@ -71,7 +72,7 @@ def test(session: Session) -> None:
         SRC_DIR,
         "-m",
         "pytest",
-        TESTS_DIR,
+        tests_dir,
         *session.posargs,
         env={
             "PYTHONPATH": SRC_DIR,
@@ -90,6 +91,18 @@ def test(session: Session) -> None:
     session.run("coverage", "xml", "-o", "tests/report/coverage.xml")
 
     session.log("Testing finished successfully.")
+
+
+@nox.session(python=PYTHON_VERSIONS)
+def unit_test(session: Session) -> None:
+    "Run only unit tests"
+    session.notify('test', 'tests/unit')
+
+
+@nox.session(python=PYTHON_VERSIONS)
+def all_tests(session: Session) -> None:
+    "Run all tests"
+    session.notify('test', 'tests')
 
 
 @nox.session(python=None)
@@ -190,6 +203,8 @@ def commit(session: Session) -> None:
 @nox.session(python=False)
 def bump(session: Session) -> None:
     """Bump via commitizen + `git push -u origin main`"""
+    session.run('nox', '-s', 'all-tests', external=True)
+    session.run("cz", "bump", external=True)
     session.run("cz", "bump")
 
 
@@ -208,4 +223,4 @@ def ci_pipeline(session: nox.Session) -> None:
 
     suffix = f"-{python_version}" if isinstance(python_version, str) else ""
     session.notify(f"lint{suffix}")
-    session.notify(f"test{suffix}")
+    session.notify(f"unit-test{suffix}")
