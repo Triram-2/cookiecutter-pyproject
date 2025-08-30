@@ -24,6 +24,7 @@ lint = [
 
 test = [
     "pytest",
+    "pytest-mock",
     "pytest-asyncio",
     "coverage[toml]",
 ]
